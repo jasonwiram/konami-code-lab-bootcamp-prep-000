@@ -14,25 +14,21 @@ const codes = [
 let index = 0;
 
 function init() {
-  document.body.addEventListener("keydown", onKeyDownHandler);
-    
-    function onKeyDownHandler(e) {
-      const key = e.key;
-      
-      if (key === codes[index]) {
-        index++;
-        
-        if (index === codes.length) {
-          alert ("Contra!");
-          
-          index = 0;
-          }
-        }
-        
-        else {
-          index = 0;
-        }
+  // your code here	  var index = 0;
+  document.addEventListener('keydown', function (e) {
+    const key = parseInt(e.detail || e.which);
+
+     if (key === code[index]) {
+      index++;
+
+       if (index === code.length - 1) {
+        window.alert("YOU DID IT!");
+        index = 0;
       }
-  }
+    } else {
+      index = 0;
+    }
+  }, false);
+}
 
 init();
