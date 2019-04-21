@@ -19,7 +19,6 @@ function init() {
       
       if (key === codes[index]) {
         index++;
-        alert('key loop')
         
         if (index === codes.length) {
           alert ("Contra!");
