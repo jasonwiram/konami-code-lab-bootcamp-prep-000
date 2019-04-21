@@ -20,20 +20,20 @@ function init() {
       const key = e.key;
       console.log(e);
       
-      if (key === codes[index]) {
-        index++;
+      // if (key === codes[index]) {
+      //   index++;
         
-        if (index === codes.length) {
-          alert ("Contra!");
+      //   if (index === codes.length) {
+      //     alert ("Contra!");
           
-          index = 0;
-          }
-        }
+      //     index = 0;
+      //     }
+      //   }
         
-        else {
-          index = 0;
-        }
-      }
+      //   else {
+      //     index = 0;
+      //   }
+      // }
   }
 
 init();
