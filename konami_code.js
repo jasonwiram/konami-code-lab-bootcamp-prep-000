@@ -24,6 +24,7 @@ function init() {
           alert ("Contra!");
           
           index = 0;
+          
         } else {
           index = 0;
         }
