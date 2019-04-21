@@ -11,29 +11,21 @@ const codes = [
   "a"
 ];
 
-let index = 0;
 
 function init() {
-  document.body.addEventListener("keydown", onKeyDownHandler);
+  let idx = 0
+
+  document.body.addEventListener("keydown", (e) => {
+    const key = e.key
     
-    function onKeyDownHandler(e) {
-      const key = e.key;
-      console.log(e);
-      
-      if (key === codes[index]) {
-        index++;
-        
-        if (index === codes.length - 1) {
-          alert ("Contra!");
-          
-          index = 0;
-          }
-        }
-        
-        else {
-          index = 0;
-        }
-      }
-  }
+    idx = (codes[idx] === key) ? ++idx : 0
+    
+    if (idx === codes.length) {
+      window.alert("Hurray!");
+      idx = 0
+    }
+    
+  });
+}
 
 init();
