@@ -14,22 +14,22 @@ const codes = [
 let index = 0
 
 function init() {
-  document.body.addEventListener('keydown', onKeyDownHandler)
+  document.body.addEventListener('keydown', onKeyDownHandler);
 }
 
 function onKeyDownHandler(e) {
-  const key = e.key
+  const key = e.key;
   
   if (key === codes[index]) {
     index++;
     
     if (index === codes.length) {
-      alert("Contra!")
-      index = 0
+      alert("Contra!");
+      index = 0;
     }
     
   } else {
-    index = 0
+    index = 0;
   }
   
 }
