@@ -14,26 +14,24 @@ const codes = [
 let index = 0;
 
 function init() {
-  document.body.addEventListener("keydown", onKeyDownHandler);
-    
-    function onKeyDownHandler(e) {
+  document.body.addEventListener("keydown", function(e) {
       const key = e.key;
-      console.log(e);
       
-      // if (key === codes[index]) {
-      //   index++;
+      if (key === codes[index]) {
+        index++;
         
-      //   if (index === codes.length) {
-      //     alert ("Contra!");
+        if (index === codes.length) {
+          alert ("Contra!");
           
-      //     index = 0;
-      //     }
-      //   }
+          index = 0;
+          }
+        }
         
-      //   else {
-      //     index = 0;
-      //   }
+        else {
+          index = 0;
       }
-  }
+    }
+  );
+}
 
 init();
