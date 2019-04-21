@@ -19,15 +19,19 @@ function init() {
 
 function onKeyDownHandler(e) {
   const key = e.key
+  
   if (key === codes[index]) {
     index++
+    
     if (index === codes.length) {
-      alert("Hurray!")
+      alert("Contra!")
       index = 0
     }
+    
   } else {
     index = 0
   }
+  
 }
 
 init();
